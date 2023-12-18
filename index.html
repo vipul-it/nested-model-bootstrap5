@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <title>Nested Modal Example</title>
+    <style>
+      /* Custom focus color for success state */
+      .modal-body .form-control.success:focus {
+        border-color: #28a745; /* Bootstrap success color */
+        box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); /* Bootstrap success color with alpha */
+        outline-color: #28a745; /* Bootstrap success color for outline */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Modal -->
+    <div
+      class="modal fade"
+      id="mainModal"
+      tabindex="-1"
+      aria-labelledby="mainModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mainModalLabel">Main Modal</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>This is the content of the main modal.</p>
+            <!-- Trigger Button for Nested Modal 1 -->
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#nestedModal1"
+            >
+              Open Nested Modal 1
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nested Modal 1 -->
+    <div
+      class="modal fade"
+      id="nestedModal1"
+      tabindex="-1"
+      aria-labelledby="nestedModal1Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div
+              class="d-flex justify-content-center align-content-center gap-2"
+            >
+              <h6 class="modal-title" id="nestedModal1Label">
+                Select <span class="fw-bold"> QuickBooks</span
+                ><span class="fw-normal fs-6">&#xae;</span> department to
+                connect with us?
+              </h6>
+            </div>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container mt-1 mb-3">
+              <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-6 mt-2">
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#nestedModal2"
+                    class="card-link text-decoration-none"
+                  >
+                    <div class="card shadow border-0">
+                      <div class="mx-auto">
+                        <img
+                          style="width: fit-content; margin-top: 10%"
+                          src="https://imagedelivery.net/yg9mV_kJZn9RkpQKfOuKfA/4964e465-6513-4a2b-b6b8-458d9a4e3800/public"
+                          class="card-img-top"
+                          alt="Image 1"
+                        />
+                      </div>
+                      <div class="">
+                        <h5
+                          style="color: #2c9f1c"
+                          class="card-title text-center fw-normal fst-italic"
+                        >
+                          Connect with Sales
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 mt-2">
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#nestedModal2"
+                    class="card-link text-decoration-none"
+                  >
+                    <div class="card shadow border-0">
+                      <div class="mx-auto">
+                        <img
+                          style="width: fit-content; margin-top: 10%"
+                          src="https://imagedelivery.net/yg9mV_kJZn9RkpQKfOuKfA/9cda7d75-7fe5-4e56-f369-ddcc7e9ad600/public"
+                          class="card-img-top"
+                          alt="Image 2"
+                        />
+                      </div>
+
+                      <div class="">
+                        <h5
+                          style="color: #2c9f1c"
+                          class="card-title text-center fw-normal fst-italic"
+                        >
+                          Connect with Support
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nested Modal 2 -->
+    <div
+      class="modal fade"
+      id="nestedModal2"
+      tabindex="-1"
+      aria-labelledby="nestedModal2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="nestedModal1Label">
+              Select Your<span class="fw-bold"> QuickBooks</span
+              ><span class="fw-normal fs-6">&#xae;</span> version.
+            </h6>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container mt-1 mb-3">
+              <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mt-2">
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#nestedModal3"
+                    class="card-link text-decoration-none"
+                  >
+                    <div class="card shadow border-0">
+                      <div class="d-flex flex-row mx-auto my-4">
+                        <input
+                          class="form-check-input me-1"
+                          type="radio"
+                          name="cardSelection"
+                          id="card1"
+                        />
+                        <div class="">
+                          <h5
+                            style="color: #2c9f1c"
+                            class="card-title text-center fw-normal fst-italic"
+                          >
+                            Online
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4 mt-2">
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#nestedModal3"
+                    class="card-link text-decoration-none"
+                  >
+                    <div class="card shadow border-0">
+                      <div class="d-flex flex-row mx-auto my-4">
+                        <input
+                          class="form-check-input me-1"
+                          type="radio"
+                          name="cardSelection"
+                          id="card1"
+                        />
+                        <div class="">
+                          <h5
+                            style="color: #2c9f1c"
+                            class="card-title text-center fw-normal fst-italic"
+                          >
+                            Desktop
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 mt-2">
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#nestedModal3"
+                    class="card-link text-decoration-none"
+                  >
+                    <div class="card shadow border-0">
+                      <div class="d-flex flex-row mx-auto my-4">
+                        <input
+                          class="form-check-input me-1"
+                          type="radio"
+                          name="cardSelection"
+                          id="card1"
+                        />
+                        <div class="">
+                          <h5
+                            style="color: #2c9f1c"
+                            class="card-title text-center fw-normal fst-italic"
+                          >
+                            Other
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nested Modal 3 -->
+    <div
+      class="modal fade"
+      id="nestedModal3"
+      tabindex="-1"
+      aria-labelledby="nestedModal3Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="nestedModal3Label">Contact Us</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body form-data">
+            <div class="container mt-1">
+              <form action="#" method="post" id="contactForm">
+                <!-- Name -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control success"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name*"
+                    required
+                  />
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control success"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+
+                <!-- Phone Number -->
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control success"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="Number"
+                    required
+                  />
+                </div>
+
+                <!-- Ex. Number -->
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control success"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="Ex. Number"
+                    required
+                  />
+                </div>
+
+                <!-- Message -->
+                <div class="mb-3">
+                  <textarea
+                    class="form-control success"
+                    id="message"
+                    name="message"
+                    rows="2"
+                    placeholder="Drop Your Message"
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Open Nested Modal 1 after 5 seconds
+        setTimeout(function () {
+          var modal1 = new bootstrap.Modal(
+            document.getElementById("nestedModal1")
+          );
+          modal1.show();
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
